@@ -1,0 +1,36 @@
+@mixin font-face($family, $file, $weight, $style: "", $category: "") {
+    $filepath: "../assets/fonts/" + $file;
+    @font-face {
+        font-family: "#{$family}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".otf")  format('opentype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+    %#{$family} {
+        font: {
+            @if $category != "" {
+                family: "#{$family}", #{$category};
+            }
+            @else {
+                family: "#{$family}";
+                weight: normal;
+            }
+        }
+    }
+}
+
+// @include font-face($family, $file, $category);
+
+
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+
+@mixin font-size-em($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + em;
+}
+
+// @include font-size(13);
