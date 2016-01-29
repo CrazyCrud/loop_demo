@@ -13,7 +13,7 @@
   width: 100%;
   max-width: $container-width;
   margin: 0 auto;
-  padding: 0 20px;
+  //padding: 0 20px;
   box-sizing: border-box;
 }
 
@@ -25,18 +25,22 @@
 }
 
 // For devices larger than 400px
+/*
 @media (#{$bp-larger-than-mobile}) {
   .container {
     width: $container-width-larger-than-mobile;
     padding: 0;
   }
 }
+*/
 
 // For devices larger than 550px
 @media (#{$bp-larger-than-phablet}) {
+  /*
   .container {
     width: $container-width-larger-than-phablet;
   }
+  */
   .column,
   .columns {
     margin-left: $column-margin;

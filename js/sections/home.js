@@ -1,6 +1,6 @@
 var App = (function(){
 	var elements = {
-		news: $(".news"),
+		news: $("#news-events"),
 		tabs: $("#tabs"),
 		tabNews: $("#tab-news"),
 		tabEvents: $("#tab-events")
@@ -11,13 +11,15 @@ var App = (function(){
 		elements.tabNews.click(function(event) {
 			elements.tabs.find('.tab-active').removeClass('tab-active');
 			$(this).addClass('tab-active');
-			elements.news.css('margin-left', '0');
+			elements.news.attr('class', '');
+			elements.news.addClass('news-active');
 		});
 
 		elements.tabEvents.click(function(event) {
 			elements.tabs.find('.tab-active').removeClass('tab-active');
 			$(this).addClass('tab-active');
-			elements.news.css('margin-left', '-100%');
+			elements.news.attr('class', '');
+			elements.news.addClass('events-active');
 		});
 	};
 	return{

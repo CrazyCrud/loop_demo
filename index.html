@@ -17,13 +17,13 @@
 			<h1 class="cl-primary">LOREM IPSUM</br>PROIN GRAVI</h1>
 			<p class="regular">Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.  Aenean sollicitudin, lorem</p>
 		</header>
-		<div class="container"></div>
+		<div class="container news-events-container">
 			<div class="row">
 				<nav id="tabs">
 					<div id="tab-news" class="tab tab-active"><div class="tab-icon"></div><div class="tab-text"><span>News</span></div></div>
 					<div id="tab-events" class="tab"><div class="tab-icon"></div><div class="tab-text"><span>Termine</span></div></div>
 				</nav>
-				<section class="news container">
+				<section id="news-events" class="news-active">
 					<div class="row news-container">
 						<div class="one-half column">
 							<div class="content-block">
@@ -67,7 +67,7 @@ Aenean sollicitudin, lorem quis bibendum auctor...</p>
 				</section>
 			</div>
 			<div class="row">
-				<section class="headline">
+				<section id="headline" class="">
 					<article>
 						<h3 class="uppercase">HEadline - Lorem Ipsum</h3>
 						<h6 class="uppercase">Subtitle Lorem IPsum</h6>
@@ -84,12 +84,20 @@ Aenean sollicitudin, lorem quis bibendum auctor...</p>
 				</section>
 			</div>
 			<div class="row">
-				<section class="team">
+				<section id="team" class="">
 
 				</section>
 			</div>
 		</div>
-		<footer id="main-footer"></footer>
+		<footer id="main-footer" class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="contact one-half column"></div>
+					<div class="sponsors one-half column"></div>
+				</div>
+				<div class="row"></div>
+			</div>
+		</footer>
 	</div>
 	<script type="text/javascript" src="js/home.js"></script>
 </body>
