@@ -1,0 +1,113 @@
+#main-header{
+	position: relative;
+	width: 100%;
+	height: 320px;
+	font-size: 1.25rem;
+	color: $cl-black;
+	background: url('../assets/images/header-small.jpg');
+	background-position: 84% 0;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	h1{
+		font-size: 1.25em;
+		text-align: right;
+		margin: 0;
+		padding: 0 0.75em;
+		padding-top: 1.45em;
+		padding-bottom: 0.85;
+	}
+	p{
+		font-size: 0.92em;
+		text-align: right;
+		padding-right: 0.75em;
+		padding-left: 8em;
+	}
+}
+
+.headline, .team, #main-footer{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.news, .headline, .team, #main-footer{
+	padding-top: 2rem;
+}
+
+.news{
+	width: 200%;
+	background-color: $cl-black;
+	color: $cl-white;
+	.news-container{
+		font-size: 1rem;
+		float: left;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.events-container{
+		font-size: 1rem;
+		float: right;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+.news > .row{
+	width: 50%;
+	margin: 0;
+}
+
+
+#tabs{
+	position: relative;
+	display: block;
+	width: 100%;
+	font-size: 0;
+	color: $cl-white;
+	.tab{
+		display: inline-block;
+		width: 50%;
+		padding: 1.2rem;
+		text-align: center;
+		font-size: 1.2rem;
+		background: $cl-black;
+		cursor: pointer;
+		transition: background 0.3s ease-out;
+		.tab-icon{
+			margin: 0 auto;
+			width: 34px;
+			height: 34px;
+		}
+		.tab-text{
+			padding-top: 0.5rem;
+		}
+	}
+	.tab-active{
+		background: $cl-primary;
+	}
+}
+
+#tab-news > .tab-icon{
+	background: url('../assets/icons/icon-news.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#tab-events > .tab-icon{
+	background: url('../assets/icons/icon-events.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.headline{
+	background-color: $cl-white;
+	font-size: 1rem;
+	article{
+		h3, h6{
+			text-align: center;
+		}
+		column-count: 1;
+	}
+}

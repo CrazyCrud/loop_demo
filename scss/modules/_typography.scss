@@ -1,3 +1,27 @@
+html{
+    font-size: 14px;
+}
+
+@media (#{$bp-larger-than-mobile}){
+    html{
+        font-size: 16px;
+    }
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+.regular{
+    font-weight: 400;
+}
+
+
+
 @mixin font-face($family, $file, $weight, $style: "", $category: "") {
     $filepath: "../assets/fonts/" + $file;
     @font-face {

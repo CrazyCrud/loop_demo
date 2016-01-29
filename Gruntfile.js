@@ -31,7 +31,7 @@ module.exports = function(grunt) {
               stripBanners: true,
             },
             home: {
-              src: ['js/vendor/jquery.js', 'js/sections/home.js'],
+              src: ['js/vendor/jquery/jquery.js', 'js/sections/home.js'],
               dest: 'js/home.js',
             }
         },
