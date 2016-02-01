@@ -7,6 +7,46 @@
 	background-color: $cl-white;
 	overflow: hidden;
 	z-index: 1000;
+	transition: height 0.2s, border-bottom 0.24s;
+	.main-nav-bar{
+		height: 3.50rem;
+		overflow: hidden;
+	}
+
+	.mobile-nav{
+		display: block;
+		position: relative;
+		
+
+		.mobile-nav-items{
+
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			padding-top: 1em;
+
+			
+			.mobile-nav-item{
+				display: block;
+				padding: 0.2em 0;
+				padding-left: 0.57em;
+				border-bottom: 1px solid $cl-black;
+				a{
+					color: $cl-black;
+					text-decoration: none;
+				}
+			}
+			.mobile-nav-item:last-child{
+				
+			}
+		}
+
+	}
+}
+
+#main-nav.toggle-nav{
+	height: 17.15rem;
+	border-bottom: 2px solid $cl-black;
 }
 
 #mobile-menu-toggle{
@@ -14,6 +54,7 @@
 	height: 100%;
 	width: 2.333em;
 	float: left;
+	cursor: pointer;
 	.mobile-menu-icon{
 		position: absolute;
 		top: 0;
@@ -33,3 +74,8 @@
 	padding: 0.45em 0.75em;
 	background: $cl-primary;
 }
+
+.index{
+	
+}
+

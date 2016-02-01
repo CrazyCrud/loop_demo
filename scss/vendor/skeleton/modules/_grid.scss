@@ -35,7 +35,7 @@
 */
 
 // For devices larger than 550px
-@media (#{$bp-larger-than-phablet}) {
+@media (#{$bp-larger-than-mobile}) {
   /*
   .container {
     width: $container-width-larger-than-phablet;
