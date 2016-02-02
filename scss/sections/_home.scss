@@ -46,16 +46,45 @@
 	.news-container{
 		font-size: 1rem;
 		float: left;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		//padding-left: 1rem;
+		//padding-right: 1rem;
 	}
 
 	.events-container{
 		font-size: 1rem;
 		float: right;
+		//padding-left: 1rem;
+		//padding-right: 1rem;
+	}
+
+	.content-block{
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
+
+	.image-block{
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 14em;
+	}
+
+	.image-block-full > div{
+		
+	}
+
+	.image-block-half > div{
+		width: 50%;
+		float: left;
+	}
+	/*
+	.image-block-half:nth-child(odd){
+		margin-left: -1rem;
+	}
+
+	.image-block-half:nth-child(even){
+		margin-right: -1rem;
+	}
+	*/
 }
 
 #news-events.news-active{
@@ -101,6 +130,34 @@
 	}
 }
 
+@media screen and (min-width: 640px){
+	#tabs{
+		display: none;
+	}
+	#news-events{
+	width: 100%;
+	height: auto;
+		.news-container{
+			width: 50%;
+			float: left;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		.events-container{
+			width: 50%;
+			float: right;
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		.one-half, .six{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}
+
 #tab-news > .tab-icon{
 	background: url('../assets/icons/icon-news.png');
 	background-position: center;
@@ -116,14 +173,37 @@
 }
 
 #headline{
+	display: block;
+	position: relative;
 	background-color: $cl-white;
 	font-size: 1rem;
 	article{
-		h3, h6{
+		padding-bottom: 4.7em;
+		h2, h5{
 			text-align: center;
 		}
-		column-count: 1;
+		
+
+		p{	
+
+			-webkit-column-count: 1;
+     		-moz-column-count: 1;
+          	column-count: 1;
+		}
 	}
+}
+
+.timeline{
+	position: absolute;
+	width: 100%;
+	height: 8em;
+	bottom: 0.8em;
+	left: 0;
+	z-index: 1;
+	background: url('../assets/images/timeline.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 #main-footer{
@@ -142,7 +222,7 @@
 	font-size: 0.95rem;
 
 	h2{
-		margin-top: 0;
+		//margin-top: 0;
 	}
 }
 
@@ -150,9 +230,9 @@
 	display: block;
 	position: absolute;
 	width: 100%;
-	top: -28px;
+	top: -38px;
 	left: 0;
-	height: 52px;
+	height: 64px;
 	transform: skewY(-6deg);
 	background-color: $cl-black;
 }
@@ -164,6 +244,7 @@
 	height: 180px;
 	margin: 0;
 	padding: 0;
+	margin-top: 3em;
 	list-style: none;
 	
 	.team-info{
@@ -231,7 +312,7 @@
 	background: $cl-white;
 	h4, h5{
 		text-align: center;
-		margin: 0;
+		
 	}
 	fieldset{
 		width: 100%;
@@ -241,6 +322,8 @@
 			font-size: 0.75em;
 			line-height: 2em;
 			background: $cl-grey;
+			border: none;
+			padding: 0.4em;
 		}
 
 		textarea{
@@ -254,13 +337,7 @@
 }
 
 #contact-form-submit{
-	width: 10em;
-	height: 2em;
-	margin: 0 0.75em;
-	color: $cl-black;
-	background-color: $cl-white;
-	border: 2px solid $cl-black;
-	text-align: center;
+	margin: 0 1em;
 }
 
 #sponsors{
