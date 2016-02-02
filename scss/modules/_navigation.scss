@@ -3,6 +3,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	max-width: 1400px;
 	height: 3.50rem;
 	background-color: $cl-white;
 	overflow: hidden;
@@ -40,7 +41,45 @@
 				
 			}
 		}
+	}
 
+	.desktop-nav-items{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 880px){
+	#mobile-menu-toggle{
+		display: none;
+	}
+	#main-nav{
+		.desktop-nav-items{
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			height: 100%;
+			padding-left: 1rem;
+			li{
+				display: inline-block;
+				height: 100%;
+				padding: 0 1em;
+				line-height: 3.50rem;
+				a{
+					position: relative;
+					font-size: 0.6em;
+					color: $cl-black;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1400px){
+	#main-nav{
+		left:50%;
+		transform: translateX(-50%);
 	}
 }
 

@@ -5,6 +5,8 @@ body{
 .index{
 	overflow: hidden;
 	padding-top: 3.50rem;
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 .cl-primary{
@@ -40,4 +42,36 @@ body{
 	color: $cl-white;
 	background-color: $cl-primary;
 	border-color: $cl-primary;
+}
+
+.underline{
+	position: relative;
+}
+
+.underline:after{
+	position: absolute;
+    top: 130%;
+    left: 20%;
+    width: 60%;
+    height: 1px;
+    background: $cl-dark-grey;
+    content: '';
+}
+
+a.hover-underline:after{
+	position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: $cl-black;
+    content: '';
+    opacity: 0;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+a.hover-underline:hover:after{
+	height: 2px;
+	opacity: 1;
+	transform: translateY(2px);
 }

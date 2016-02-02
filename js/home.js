@@ -44,6 +44,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 
 		loadNewsImages();
 		loadTeamImages();
+		initTeamImages();
 	};
 
 	var loadNewsImages = function(){
@@ -57,6 +58,24 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 		elements.teamImages.children('.team-image').each(function(index, el) {
 			var imgLink = $(this).attr('data-image-link');
 			$(this).css('background-image', 'url(' + imgLink + ')');
+		});
+	};
+
+	var initTeamImages = function(){
+		elements.teamImages.children('.team-image').hover(function() {
+			$(this).addClass('team-member-active');
+			if(($(this).offset().left + $(this).width()) > ($(window).width() - $(this).width())){
+				$(this).addClass('fade-left');
+			}else{
+				$(this).addClass('fade-right');
+			}		
+		}, function() {
+			$(this).removeClass('team-member-active');
+			if($(this).hasClass('fade-right')){
+				$(this).removeClass('fade-right');
+			}else{
+				$(this).removeClass('fade-left');
+			}
 		});
 	};
 	return{
