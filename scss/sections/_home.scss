@@ -6,7 +6,7 @@
 	color: $cl-black;
 	background-image: url('../assets/images/compass.png'),
 					url('../assets/images/header-small.jpg');
-	background-position: 110% center, 84% 0;
+	background-position: 120% center, 84% 0;
 	background-repeat: no-repeat, no-repeat;
 	background-size: 34%, cover;
 	overflow: hidden;
@@ -22,7 +22,7 @@
 		font-size: 0.92em;
 		text-align: right;
 		padding-right: 0.75em;
-		padding-left: 4em;
+		padding-left: 14em;
 	}
 }
 
@@ -50,7 +50,7 @@
 			url('../assets/images/header-medium.jpg');
 		background-position: 110% center, 84% 0;
 		background-size: 22%, cover;
-		height: 420px;
+		
 
 		p{
 			text-align: center;
@@ -63,7 +63,8 @@
 	#main-header{
 		background-image: url('../assets/images/compass.png'), 
 			url('../assets/images/header-big.jpg');
-		background-position: 110% center, 0 -180px;
+		background-position: 110% center, 0 -10px;
+		height: 480px;
 		h1{
 			font-size: 1.75em;
 		}
@@ -76,18 +77,21 @@
 
 @media screen and (min-width: 1020px){
 	#main-header{
-		
+		height: 510px;
 		p{
-			padding-left: 38em;
+			padding-left: 34em;
 		}
 	}
 }
 
 @media screen and (min-width: 1260px){
 	#main-header{
-		
+		background-position: 110% center, 0 -80px;
+		h1{
+			padding-right: 3em;
+		}
 		p{
-			padding-left: 50em;
+			padding-left: 42em;
 		}
 	}
 }
@@ -375,6 +379,7 @@
 			// background: url('../assets/images/news-bg-1.jpg');
 			background-repeat: no-repeat;
 			background-size: contain;
+			border-right: 1px solid $cl-white;
 			.more-news-icon{
 				span{
 					margin-top: 60px;
@@ -390,6 +395,7 @@
 		}
 
 		.more-events{
+			border-left: 1px solid $cl-white;
 			.more-events-icon{
 				span{
 					margin-top: 60px;
@@ -649,7 +655,7 @@
 	display: block;
 	position: relative;
 	width: 100%;
-	height: 180px;
+	
 	margin: 0;
 	padding: 0;
 	margin-top: 3em;
@@ -660,10 +666,9 @@
 		position: relative;
 		float: left;
 		width: 50%;
-		//margin-right: 50%;
+		height: 180px;
 		margin-right: 0;
 		margin-left: 0;
-		height: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
 
@@ -742,6 +747,7 @@
 @media screen and (min-width: 820px){
 	.team-images{
 		.team-image{
+			height: 220px;
 			width: 20%;
 		}
 	}
@@ -767,7 +773,9 @@
 		position: relative;
 		width: 100%;
 		border: none;
+		padding: 0.35em 0.75em 0.75em;
 		padding-bottom: 1.5em;
+
 		input, textarea{
 			width: 100%;
 			font-size: 0.75em;
@@ -789,7 +797,7 @@
 	.required-error{
 		position: absolute;
 		bottom: 6px;
-		left: 1em;
+		left: 1.2em;
 		display: none;
 	    margin-top: 0;
 	    color: $cl-primary;
@@ -801,6 +809,10 @@
 #contact-form-submit{
 	margin: 0 0.95em;
 	margin-top: 0.6em; 
+}
+
+#contact-form-submit:focused{
+	outline: none;
 }
 
 #contact-form-submit.form-send{

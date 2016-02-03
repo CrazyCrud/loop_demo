@@ -83,11 +83,6 @@
 	}
 }
 
-#main-nav.toggle-nav{
-	height: 17.15rem;
-	border-bottom: 1px solid $cl-black;
-}
-
 #mobile-menu-toggle{
 	position: relative;
 	height: 100%;
@@ -104,6 +99,27 @@
 		background-position: center 70%;
 		background-size: contain;
 		background-repeat: no-repeat;
+		visibility: visible;
+	}
+	.mobile-menu-icon.close{
+		background: url('../assets/icons/menu-close.svg');
+		background-position: center 64%;
+		background-size: 44%;
+		background-repeat: no-repeat;
+		visibility: hidden;
+	}
+}
+
+
+#main-nav.toggle-nav{
+	height: 17.15rem;
+	border-bottom: 1px solid $cl-black;
+
+	.mobile-menu-icon{
+		visibility: hidden;
+	}
+	.mobile-menu-icon.close{
+		visibility: visible;
 	}
 }
 

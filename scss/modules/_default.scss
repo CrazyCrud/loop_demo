@@ -60,6 +60,20 @@ body{
     content: '';
 }
 
+@media screen and (min-width: 640px){
+    .underline:after{
+        left: 30%;
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .underline:after{
+        left: 38%;
+        width: 23%;
+    }
+}
+
 a.hover-underline:after{
 	position: absolute;
     top: 100%;

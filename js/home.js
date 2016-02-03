@@ -16,6 +16,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 		inputName: $("#name"),
 		inputEmail: $("#email"),
 		inputMessage: $("#message"),
+		subNav: $("#sub-nav"),
 		inputSubmit: $("#contact-form-submit")
 	};
 
@@ -50,6 +51,10 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 			elements.news.addClass('events-active');
 		});
 
+		elements.subNav.find('a').click(function(event) {
+			event.preventDefault();
+		});;
+
 
 		loadNewsImages();
 		loadTeamImages();
@@ -75,12 +80,15 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 	var initTeamImages = function(){
 		elements.teamImages.children('.team-image').hover(function() {
 			$(this).addClass('team-member-active');
-			if(($(this).offset().left + $(this).width()) > ($(window).width() - $(this).width())){
+			console.log("Offset to ul's left border", $(this).position().left);
+			console.log("Width of the element", $(this).width());
+			console.log("Container width", elements.teamImages.width());
+			if(($(this).position().left + $(this).width()) >= (elements.teamImages.width() - $(this).width() / 2)){
 				$(this).addClass('fade-left');
 			}else{
 				$(this).addClass('fade-right');
-			}		
-		}, function() {
+			}
+		},function(){
 			$(this).removeClass('team-member-active');
 			if($(this).hasClass('fade-right')){
 				$(this).removeClass('fade-right');
