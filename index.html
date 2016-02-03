@@ -31,7 +31,7 @@
 		</nav>
 		<div class="main-container">
 			<header id="main-header">
-				
+
 				<h1 class="cl-primary">LOREM IPSUM</br>PROIN GRAVI</h1>
 				<p class="bold">Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.  Aenean sollicitudin, lorem</p>
 			</header>
@@ -150,13 +150,16 @@
 							<h5 class="uppercase">Formular</h5>
 							<form id="contact-form" action="" method="post">
 								<fieldset>
-							    	<input placeholder="Name*" type="text" tabindex="1" required>
+							    	<input placeholder="Name*" id="name" name="name" type="text" tabindex="1">
+							    	<label for="name" class="required-error">Bitte geben Sie hier Ihren Namen ein!</label>
 							    </fieldset>
 							    <fieldset>
-							    	<input placeholder="Email*" type="email" tabindex="2" required>
+							    	<input placeholder="Email*" id="email" name="email" type="email" tabindex="2">
+							    	<label for="email" class="required-error">Bitte geben Sie Ihre Email-Adresse ein!</label>
 							    </fieldset>
 							    <fieldset>
-							    	<textarea placeholder="Nachricht*" tabindex="3" required></textarea>
+							    	<textarea placeholder="Nachricht*" id="message" name="nachricht" tabindex="3"></textarea>
+							    	<label for="nachricht" class="required-error">Was habe Sie uns zu sagen?</label>
 							    </fieldset>
 							    <button class="uppercase button-medium" id="contact-form-submit">Absenden</button>
 							</form>
