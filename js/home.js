@@ -27,9 +27,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 
 		elements.logo.click(function(event) {
 			event.preventDefault();
-			$("html, body").animate({scrollTop:0}, '500', 'swing', function() { 
-
-			});
+			$("html, body").animate({scrollTop:0}, '500', 'swing');
 		});
 
 		elements.menuToggle.click(function(event) {

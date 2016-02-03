@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
     // 1. All configuration goes here 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -47,6 +46,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            my_target: {
+              files: {
+                'js/home.min.js': ['js/home.js']
+              }
+            }
+        },
         watch: {
             grunt: {
                 files: ['Gruntfile.js']
@@ -65,6 +74,16 @@ module.exports = function(grunt) {
                   spawn: true,
                 },
             }
+        },
+        imagemin: {                      
+            dynamic: {                      
+                files: [{
+                    expand: true,                 
+                    cwd: 'assets/',                   
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'dist/'               
+              }]
+            }
         }
     });
 
@@ -72,11 +91,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     //grunt.loadNpmTasks('grunt-criticalcss');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('build', ['sass', 'cssmin', 'concat']);
+    grunt.registerTask('build', ['sass', 'cssmin', 'concat', 'uglify', 'imagemin']);
     grunt.registerTask('default', ['build', 'watch']);
 
 };

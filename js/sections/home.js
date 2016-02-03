@@ -23,9 +23,7 @@ var App = (function(){
 
 		elements.logo.click(function(event) {
 			event.preventDefault();
-			$("html, body").animate({scrollTop:0}, '500', 'swing', function() { 
-
-			});
+			$("html, body").animate({scrollTop:0}, '500', 'swing');
 		});
 
 		elements.menuToggle.click(function(event) {

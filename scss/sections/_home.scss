@@ -4,11 +4,11 @@
 	height: 320px;
 	font-size: 1.25rem;
 	color: $cl-black;
-	background-image: url('../assets/images/compass.png'),
-					url('../assets/images/header-small.jpg');
-	background-position: 120% center, 84% 0;
+	background-image: url('../dist/images/compass.png'),
+					url('../dist/images/header-small.jpg');
+	background-position: 120% center, 90% 0;
 	background-repeat: no-repeat, no-repeat;
-	background-size: 34%, cover;
+	background-size: 34%, 210%;
 	overflow: hidden;
 	h1{
 		font-size: 1.25em;
@@ -22,7 +22,7 @@
 		font-size: 0.92em;
 		text-align: right;
 		padding-right: 0.75em;
-		padding-left: 14em;
+		padding-left: 5em;
 	}
 }
 
@@ -36,21 +36,32 @@
 	opacity: 0.4;
 }
 
+@media screen and (min-width: 430px){
+	#main-header{
+		background-position: 120% center, 90% 0;
+		background-size: 34%, 160%;
+		p{
+			padding-left: 7em;
+		}
+	}
+}
+
 @media screen and (min-width: 600px){
 	#main-header{
+		background-size: 34%, 140%;
 		p{
-			padding-left: 18em;
+			padding-left: 15em;
 		}
 	}
 }
 
 @media screen and (min-width: 720px){
 	#main-header{
-		background-image: url('../assets/images/compass.png'), 
-			url('../assets/images/header-medium.jpg');
+		background-image: url('../dist/images/compass.png'), 
+			url('../dist/images/header-medium.jpg');
 		background-position: 110% center, 84% 0;
 		background-size: 22%, cover;
-		
+		height: 400px;
 
 		p{
 			text-align: center;
@@ -61,8 +72,8 @@
 
 @media screen and (min-width: 980px){
 	#main-header{
-		background-image: url('../assets/images/compass.png'), 
-			url('../assets/images/header-big.jpg');
+		background-image: url('../dist/images/compass.png'), 
+			url('../dist/images/header-big.jpg');
 		background-position: 110% center, 0 -10px;
 		height: 480px;
 		h1{
@@ -129,7 +140,7 @@
 		position: absolute;
 		bottom: 0;
 		left: -40px;
-		content: url('../assets/icons/icon-date.png');
+		content: url('../dist/icons/icon-date.png');
 		width: 29px;
 		height: 29px;
 	}
@@ -318,12 +329,12 @@
 			
 			.six:first-child{
 				color: $cl-black;
-				background: url('../assets/images/event-bg-2.jpg');
+				background: url('../dist/images/event-bg-2.jpg');
 			}
 
 			.six:nth-child(2){
 				color: $cl-black;
-				background: url('../assets/images/event-bg-2.jpg');
+				background: url('../dist/images/event-bg-2.jpg');
 			}
 
 			h4{
@@ -376,7 +387,7 @@
 		}
 
 		.more-news{
-			// background: url('../assets/images/news-bg-1.jpg');
+			// background: url('../dist/images/news-bg-1.jpg');
 			background-repeat: no-repeat;
 			background-size: contain;
 			border-right: 1px solid $cl-white;
@@ -386,7 +397,7 @@
 					display: inline-block;
 					width: 41px;
 					height: 41px;
-					background: url('../assets/icons/icon-news.png');
+					background: url('../dist/icons/icon-news.png');
 					background-repeat: no-repeat;
 					background-size: contain;
 				}
@@ -402,7 +413,7 @@
 					display: inline-block;
 					width: 41px;
 					height: 41px;
-					background: url('../assets/icons/icon-events.png');
+					background: url('../dist/icons/icon-events.png');
 					background-repeat: no-repeat;
 					background-size: contain;
 				}
@@ -463,14 +474,14 @@
 }
 
 #tab-news > .tab-icon{
-	background: url('../assets/icons/icon-news.png');
+	background: url('../dist/icons/icon-news.png');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #tab-events > .tab-icon{
-	background: url('../assets/icons/icon-events.png');
+	background: url('../dist/icons/icon-events.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -521,7 +532,7 @@
 	bottom: 0.8em;
 	left: 0;
 	z-index: 1;
-	background: url('../assets/images/timeline.png');
+	background: url('../dist/images/timeline.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -803,6 +814,10 @@
 	    color: $cl-primary;
 	    font-weight: 300;
 	    font-size: 0.65em;
+	}
+
+	.fieldset-message label{
+		bottom: 14px;
 	}
 }
 
