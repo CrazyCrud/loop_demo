@@ -85,7 +85,7 @@
 
 #main-nav.toggle-nav{
 	height: 17.15rem;
-	border-bottom: 2px solid $cl-black;
+	border-bottom: 1px solid $cl-black;
 }
 
 #mobile-menu-toggle{
@@ -101,7 +101,7 @@
 		right: 0;
 		bottom: 0;
 		background: url('../assets/icons/menu.svg');
-		background-position: center;
+		background-position: center 70%;
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
